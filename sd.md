@@ -26,3 +26,4 @@ sequenceDiagram
     style Repository fill:#C8E6C9,stroke:#333,stroke-width:1px
     style Preview fill:#F8BBD0,stroke:#333,stroke-width:1px
     style Export fill:#D1C4E9,stroke:#333,stroke-width:1px
+
