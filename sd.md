@@ -1,3 +1,5 @@
+# Sequence Diagram - Template Workflow (with Colors)
+
 ```mermaid
 sequenceDiagram
     actor User
@@ -6,24 +8,23 @@ sequenceDiagram
     participant Preview as Preview Engine
     participant Export as Export Service
 
-    %% Flow
-    User ->> TM: Create template
-    TM ->> Repository: Save template
+    rect rgb(255, 213, 128)
+        User ->> TM: Create template
+        TM ->> Repository: Save template
+    end
 
-    User ->> TM: Request preview
-    TM ->> Preview: Generate preview
-    Preview -->> TM: Return preview
-    TM -->> User: Show preview
+    rect rgb(248, 187, 208)
+        User ->> TM: Request preview
+        TM ->> Preview: Generate preview
+        Preview -->> TM: Return preview
+        TM -->> User: Show preview
+    end
 
-    User ->> TM: Export as PDF
-    TM ->> Export: Generate PDF
-    Export -->> TM: Return PDF
-    TM -->> User: Deliver PDF
+    rect rgb(209, 196, 233)
+        User ->> TM: Export as PDF
+        TM ->> Export: Generate PDF
+        Export -->> TM: Return PDF
+        TM -->> User: Deliver PDF
+    end
 
-    %% Colors
-    style User fill:#FFD580,stroke:#333,stroke-width:1px
-    style TM fill:#B3E5FC,stroke:#333,stroke-width:1px
-    style Repository fill:#C8E6C9,stroke:#333,stroke-width:1px
-    style Preview fill:#F8BBD0,stroke:#333,stroke-width:1px
-    style Export fill:#D1C4E9,stroke:#333,stroke-width:1px
 
